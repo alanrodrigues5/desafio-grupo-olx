@@ -8,7 +8,7 @@ Funcionalidade: Buscar Imoveis
     E deve estar pronta para morar
     Entao a lista de resultados é mostrada
 
-  #Cenario: pesquisar imoveis para compra
+  Cenario: pesquisar imoveis para compra
   #Cenario: pesquisar imoveis para alugar
   #Cenario: denunciar anuncio
   #Cenario: conferir mais ofertas do anunciante
