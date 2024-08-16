@@ -13,7 +13,7 @@ Funcionalidade: Buscar Imoveis
     Quando pesquiso uma cobertura para alugar na cidade de São Paulo
     E a cobertura deve aceitar Pets
     E deve estar pronta para morar
-    Entao a lista de resultados é mostrada
+   # Entao a lista de resultados é mostrada
   
   Cenario: pesquisar imoveis para alugar
     Dado que estou na página inicial do portal ZAP imóveis
