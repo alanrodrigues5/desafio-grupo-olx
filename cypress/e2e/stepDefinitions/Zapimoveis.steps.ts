@@ -1,24 +1,27 @@
 import {Given, When, Then} from '@badeball/cypress-cucumber-preprocessor'
+import HomePage from '../pages/zapimoveis/HomePage';
 
 Given("que estou na página inicial do portal ZAP imóveis",() => {
-   // cy.visit("https://www.zapimoveis.com.br/"); 
+     HomePage.open();
 });
-
 When("pesquiso uma cobertura para alugar na cidade de São Paulo", () => {
-   // cy.click([id='l-multiselect-5314806'])
+   cy.get('[data-cy="aluguel-tab"]').click()   
 
-});
+   });
 
+   /**
 When("a cobertura deve aceitar Pets", () => {
-
+   
 
 });
 
 When("deve estar pronta para morar",() => {
-
+   
 
 });
 
 Then("a lista de resultados é mostrada", () => {
    
 });
+* 
+*/

@@ -1,28 +1,38 @@
  class HomePage {
-     private static CSS_INPUT_SEARCH = '#searchbox_input'
-     private static CSS_BUTTON_SEARCH = '#searchbox_homepage button[type="submit"]'
+
+     private static URL = "www.zapimoveis.com.br/"
+     private static BTN_ALUGAR = '[data-cy=aluguel-tab]'
+     private static TIPO_DE_IMOVEL = '.l-multiselect__input-content'
+     private static ONDE_DESEJA_MORAR = '#l-multiselect-370345'
+     private static BUSCAR = '[type=submit]'
 
     static  open(): void {
-        cy.visit("https://duckduckgo.com/")
-        cy.get('body').should('be.visible')
+        cy.visit(this.URL)
+        //cy.get('[href='/cadastro']')
+        //cy.get('[getdata-cy='aluguel-tab']')
+        //exemplos que funcionam
+        //cy.get('.btn.btn-primary').click()
+        //cy.get('.active > a').click()
+        //cy.get(':nth-child(2) > a').click()
+        //cy.get('#nome').type('xpto')
+        //cy.get('#email').type('w@live.com')
+        //cy.get('#senha').type('1234')
+        //cy.get('.btn').click()
+        //cy.wait(5000)
+        //cy.get('#email').type('w@live.com')
+        //cy.get('#senha').type('1234')
+        //cy.get('.btn').click()
+
     }
 
-    static click(): void {
-         cy.get(HomePage.CSS_BUTTON_SEARCH).should('be.visible')
-         cy.get(HomePage.CSS_BUTTON_SEARCH).click()
+    static buscar(): void {
+       cy.get(this.BUSCAR).click()
     }
 
-    static fillSearch(text: string): void {
-        cy.get(HomePage.CSS_INPUT_SEARCH).should('be.visible')
-        cy.get(HomePage.CSS_INPUT_SEARCH).type(text)
+    static pesquisar(text: string): void {
+        cy.get(this.ONDE_DESEJA_MORAR).type(text)
     }
 
-    static search(): void {
-        if (!cy.get(HomePage.CSS_BUTTON_SEARCH).should('be.visible')) {
-            return
-        }
-        cy.get(HomePage.CSS_BUTTON_SEARCH).click()
-    }
  }
 
  export default HomePage
