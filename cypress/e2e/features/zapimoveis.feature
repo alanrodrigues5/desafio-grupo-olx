@@ -4,9 +4,9 @@ Funcionalidade: Buscar Imoveis
   Cenario: Pesquisar Imoveis que aceitam animais e que estejam mobilhados
     Dado que estou na página inicial do portal ZAP imóveis
     Quando pesquiso uma cobertura para alugar na cidade de São Paulo
-  #  E a cobertura deve aceitar Pets
-  #  E deve estar pronta para morar
-  #  Entao a lista de resultados é mostrada
+    E a cobertura deve aceitar Pets
+    E deve estar pronta para morar
+    Entao a lista de resultados é mostrada
 
  # Cenario: pesquisar imoveis para compra
  #   Dado que estou na página inicial do portal ZAP imóveis

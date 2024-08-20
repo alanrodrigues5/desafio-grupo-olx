@@ -1,10 +1,11 @@
  class HomePage {
 
      private static URL = "www.zapimoveis.com.br/"
-     private static BTN_ALUGAR = '[data-cy=aluguel-tab]'
+     private static BTN_OPCAO_ALUGAR = '[data-cy=aluguel-tab]'
      private static TIPO_DE_IMOVEL = '.l-multiselect__input-content'
-     private static ONDE_DESEJA_MORAR = '#l-multiselect-370345'
+     private static ONDE_DESEJA_MORAR = '.l-input__input.l-input__input--variant-large.l-input__input--icon-left.l-input__input--counter'
      private static BUSCAR = '[type=submit]'
+     private static OPCAO_COBERTURA_COMBOBOX = '#l-checkbox-32'
 
     static  open(): void {
         cy.visit(this.URL)
@@ -31,6 +32,13 @@
 
     static pesquisar(text: string): void {
         cy.get(this.ONDE_DESEJA_MORAR).type(text)
+    }
+
+    static pesquisarCobertura(): void {
+        cy.get(this.TIPO_DE_IMOVEL).click()
+        cy.get(this.BTN_OPCAO_ALUGAR).click()   
+        cy.get(this.OPCAO_COBERTURA_COMBOBOX).click()
+        cy.get(this.ONDE_DESEJA_MORAR).type('São Paulo - SP, {Enter}')
     }
 
  }

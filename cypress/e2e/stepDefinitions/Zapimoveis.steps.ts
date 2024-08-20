@@ -5,11 +5,9 @@ Given("que estou na página inicial do portal ZAP imóveis",() => {
      HomePage.open();
 });
 When("pesquiso uma cobertura para alugar na cidade de São Paulo", () => {
-   cy.get('[data-cy="aluguel-tab"]').click()   
+   HomePage.pesquisarCobertura();
+});
 
-   });
-
-   /**
 When("a cobertura deve aceitar Pets", () => {
    
 
